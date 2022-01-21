@@ -1,0 +1,31 @@
+ <div class='container'>
+    <fieldset class="border" >
+        <legend class ='text-left'>Add a location</legend>
+         <form [formGroup]="wForm">
+            <table>
+                <tr>
+                    <td> <b>Enter a ZipCode</b></td>
+                    <td>
+                        <input type="text" class="form-control" formControlName="zipcode">
+                     </td>
+                     <td>
+                        <button type="button" class="btn btn-primary btnalign" [attr.disable]="!wForm.valid" (click)="addLocation()">Add location</button>
+                     </td>
+                 </tr>
+              </table>
+         </form>
+  </fieldset>
+  <hr style="border-top:1px solid black" *ngIf="weatherItems.length > 0">
+    <div class="items">
+        <app-weather-items *ngFor="let weatherItem of weatherItems" [item]="weatherItem" (newItemEvent) = "removeItem($event)"></app-weather-items>
+    </div>
+    <div *ngIf="weatherItems.length == 0"> 
+        <table class="nodata">
+             <tr>
+                  <td>
+                       No Data Found
+                  </td>
+             </tr>
+        </table>
+    </div>
+  </div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <fieldset class="border" >
+        <legend class ='text-left'>{{cityName}} ({{cityCode}})</legend>
+         <div class="col-lg-12">
+             <div  class="col-lg-8">
+                <table>
+                    <tr *ngFor="let weather of WeatherForecastList">
+                        <td>{{weather.day}} : {{weather.status}}</td>
+                        <td>High : {{weather.maxtemp}}°</td>
+                        <td>Low : {{weather.mintemp}}°</td>
+                        <td class="imgalign">
+                            <img src="assets/icons/clouds.png" style="height:25px;width:25px" *ngIf="weather.status == 'Clouds'" class="rounded float-left" alt="clouds">
+                            <img src="assets/icons/rain.png" style="height:25px;width:25px" *ngIf="weather.status == 'Rain'" class="rounded float-left" alt="Rain">
+                            <img src="assets/icons/snow.png" style="height:25px;width:25px" *ngIf="weather.status == 'Snow'" class="rounded float-left" alt="Snow">
+                            <img src="assets/icons/sun.png" style="height:25px;width:25px" *ngIf="weather.status == 'Sun'" class="rounded float-left" alt="Sun">
+                        </td>
+                    </tr>
+                   
+                </table>
+             </div>
+         </div>
+    </fieldset>
+    <div class="mt-10">
+        <button type="button" class="btn btn-info" routerLink="/">Go Back</button>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+fieldset{
+    border:2px solid black;
+ }
+ 
+  legend{
+     width: auto;
+     margin-left: 25px;
+     padding: 10px 5px 10px 5px;
+     border-bottom: none;
+     font-size: 16px;
+     margin-bottom: 0px;
+ }
+ 
+ table > tr > td {
+     padding:2px 10px 10px 0px
+ }
+ 
+ .container {
+    width: 860px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.imgalign{
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+}

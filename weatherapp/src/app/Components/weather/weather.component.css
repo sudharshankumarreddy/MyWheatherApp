@@ -1,0 +1,39 @@
+fieldset{
+   border:2px solid black;
+}
+
+ legend{
+    width: auto;
+    margin-left: 25px;
+    padding: 10px 5px 10px 5px;
+    border-bottom: none;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+table > tr > td {
+    padding:5px 20px 20px 20px
+}
+
+.container {
+    width: 860px;
+}
+
+.nodata{
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    min-height: 200px;
+}
+
+button:disabled {
+    color:#717782;
+}
+
+.btnalign{
+    background-color: #f54336 !important;
+    border-color: #f54336 !important;
+    position: relative;
+    right: 25px;
+}
